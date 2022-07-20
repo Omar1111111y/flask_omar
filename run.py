@@ -4,15 +4,14 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
-incomes = [
-  { 'description': 'salary', 'amount': 5000 }
-]
+incomes = {'name':'Omar_Style','age': 18}
+
 
 @app.route('/')
 def get_incomes():
   return jsonify(incomes)
 if __name__ == "__main__":
-	app.run(port=3333)
+	app.run()
 
 
 ##########################
